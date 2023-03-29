@@ -88,6 +88,8 @@ namespace Laba_5_pipets_kollegi
 
                         manufacturers.InsertQuery(Tb1.Text);
                     }
+                    Task.Delay(400);
+                    Save_btn.Text = "Enter для Сохранения";
                 }
                 catch
                 {

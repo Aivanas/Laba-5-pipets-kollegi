@@ -98,6 +98,9 @@ namespace Laba_5_pipets_kollegi
                             trailers.UpdateQuery(Tb1.Text, Convert.ToInt32(Tb2.Text), Convert.ToInt16(Tb3.Text), Convert.ToInt16(Tb4.Text), Convert.ToInt32(Cb1.SelectedValue), Convert.ToInt32(Choose_cmbx.SelectedValue));
                             Save_btn.Text = "Сохранено!";
                             break;
+
+                            Task.Delay(1000);
+                            Save_btn.Text = "Enter для Сохранения";
                     }
                 }
                 catch 

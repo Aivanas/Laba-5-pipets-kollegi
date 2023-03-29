@@ -67,7 +67,7 @@ namespace Laba_5_pipets_kollegi
             }
         }
 
-        private void MegaGrid_KeyDown(object sender, KeyEventArgs e)
+        private async void MegaGrid_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
@@ -96,6 +96,8 @@ namespace Laba_5_pipets_kollegi
                             Save_btn.Text = "Сохранено!";
                             break;
                     }
+                    await Task.Delay(200);
+                    Save_btn.Text = "Enter для удаления";
                 }
                 catch
                 {

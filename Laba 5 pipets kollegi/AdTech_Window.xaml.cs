@@ -119,7 +119,7 @@ namespace Laba_5_pipets_kollegi
             this.Hide();
         }
 
-        private void MegaGrid_KeyDown(object sender, KeyEventArgs e)
+        public async void MegaGrid_KeyDown(object sender, KeyEventArgs e)
         {
 
             if (e.Key == Key.Enter)
@@ -150,12 +150,15 @@ namespace Laba_5_pipets_kollegi
                         trailers.InsertQuery(Tb1.Text, Convert.ToInt32(Tb2.Text), Convert.ToInt32(Tb3.Text), Convert.ToInt32(Tb4.Text), Convert.ToInt32(Tb5.Text));
                         Save_btn.Text = "Сохранено!";
                     }
+
                 }
                 catch
                 {
                     MessageBox.Show("Ошибка сохранения");
                 }
-                
+                await Task.Delay(200);
+                Save_btn.Text = "Enter для удаления";
+
             }
         }
     }
